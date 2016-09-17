@@ -560,6 +560,10 @@ class Text {
         }
 
     }
+	
+	static clean (text, regex) {
+		return text.replace(new RegExp(regex, "g"), "");
+	}
 
     static removeSpecialCharacters(text){
         var special = Array("#", ":", "ñ", "í", "ó", "ú", "á", "é", "Í", "Ó", "Ú", "Á", "É", "\(", "\)", "¡", "¿", "\/");

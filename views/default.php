@@ -81,6 +81,11 @@
 
 		<!-- build:scripts -->
 		<script src="js/aegis.js"></script>
+		<script src="js/knowledge.js"></script>
+		<script src="js/memory.js"></script>
+		<script src="js/assistant.js"></script>
+		<script src="js/user.js"></script>
+		<script src="js/chatbot.js"></script>
 		<script src="js/main.js"></script>
 		<!-- endbuild -->
 
