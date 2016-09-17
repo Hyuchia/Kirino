@@ -1,0 +1,108 @@
+<nav class="nav top-m top-s">
+    <img src="img/kirino.svg" class="logo" data-show="main">
+    <h1 class="logo" data-show="main">Kirino</h1>
+    <ul>
+        <li class="fa fa-cog" data-show="settings"></li>
+        <li class="fa fa-question-circle" data-show="help"></li>
+        <li class="fa fa-sign-out" data-action="logout"></li>
+    </ul>
+</nav>
+
+
+<section data-content="main" class="align-center active">
+    <div id="output">
+        <p class="kirino"><span>Hey how are you Diego?</span></p>
+        <p class="user"><span>hello</span></p>
+        <p class="kirino"><span>How are you?</span></p>
+        <p class="user"><span>fine and you?</span></p>
+        <p class="kirino"><span>Also fine thanks.</span></p>
+    </div>
+    <form>
+        <input type="text" id="input" name = "input" autocomplete="off" placeholder="Write a message" />
+        <button type="submit">Reply</button>    
+    </form>
+    <footer class="padded-1 align-center">
+        <a href="https://hyuchia.com"><img src="img/hyuchia.svg"></a>
+    </footer>
+</section>
+
+<section data-content="settings" class="align-center">
+    <h2>Settings</h2>
+    <form class="padded-1">
+        	<label for="username">I want to be called:</label>
+			<input type="text" name="username" placeholder="I want to be called" required="true"/>
+			
+            <label for="kirinoname">Assistant Name:</label>
+			<input type="text" name="kirinoname"placeholder="Assistant Name" required="true"/>
+
+		    <label for="city">My city:</label>
+			<input type="text" name="city"placeholder="City"/>
+
+			<label for="engine">Preferred Search engine:</label>
+            <select name="engine">
+				<option id="Google" value="Google">Google</option>
+				<option id="Bing" value="Bing">Bing</option>
+				<option id="Yahoo" value="Yahoo">Yahoo</option>
+				<option id="Ask" value="Ask">Ask</option>
+				<option id="Baidu" value="Baidu">Baidu</option>
+				<option id="DuckDuckGo" value="DuckDuckGo">DuckDuckGo</option>
+				<option id="Yandex" value="Yandex">Yandex</option>
+				<option id="360" value="360">360 Search</option>
+				
+			</select>
+
+			<!--<label for="lang">Language (More to come!) :</label>
+				<select name="lang">
+					<option id="en-US" value="en-US">English</option>
+				</select>
+			</div>-->
+			<label for="speak">Speak: </label><input type="checkbox" id="speak" name="speak" />
+
+            <div>
+			    <label for="pass">Type your password to save changes:</label>
+			    <input type="password" name="pass"placeholder="Password" required="true"/>
+            </div>
+
+			<span id="sstatus"></span>
+			<button type="submit">Save</button>
+    </form>
+</section>
+
+<section data-content="help" class="align-left padded-2">
+    <h2>Help</h2>
+    <p>Here are some tips and commands that will help you have the best experience with Kirino:</p>
+    <b>Chatting</b> 
+    <p>Just type whatever you like, like if you were chatting with a friend!.</p>
+    <b>Text to Speech</b> 
+    <p>Kirino can talk!, you can turn it off or on in the settings tab. This configuration is saved locally, so you can have certain devices where you want her to talk. The voice depends on your OS and Browser.</p> 
+    <b>Night Mode</b> 
+    <p>You are on your cellphone or tablet in the night? Night Mode is for you, it will reduce the brightness. Type: "Night mode" </p> 
+    <b>Change settings</b> 
+    <p>In the settings tab you'll be able to change your name, city, your assistant's name and more.</p> 
+    <b>Date and Time</b> 
+    <p>Type: "Tell me the date" or "What date is it"</p>  
+    <b>Mailing</b> 
+    <p>Type: "Send mail to email@sample.com"</p> 
+    <b>Facebook</b> 
+    <p>Type: "Post to Facebook" or " Facebook Post"</p> 
+    <b>Twitter</b> 
+    <p>Type: "Tweet" or "Post to Twitter"</p> 
+    <b>Google+</b> 
+    <p>Type: "Post to Google" or " Google Post"</p> 
+    <b>Arithmetic</b>
+    <p>Type: "Solve OPERATION" Ex: Solve 2+2</p>
+    <b>Graphing</b> 
+    <p>Type: "Graph EQUATION" Ex: Graph 3x-1</p> 
+    <b>Open websites</b> 
+    <p>Type: "Open WEBSITE" Ex: "Open Facebook"</p> 
+    <b>Web Search</b> 
+    <p>Type: "Pictures of WORD" Ex: "Pictures of koalas"</p>
+    <b>Images Search</b>
+    <p>Type: "Search WORD" Ex: "Search Hyuchia Corporation"</p>
+    <b>Weather in your city</b> 
+    <p>To get the current weather in your city Type: "Weather" or "Climate" (Your city must be set in the settings tab)</p>
+    <b>Weather in somewhere else</b> 
+    <p>To get the current weather Type: "Weather in CITY" or "Climate in CITY"</p>
+    <b>Google maps</b> 
+    <p>Searching some location? Type: "Maps PLACE"</p>
+</section>

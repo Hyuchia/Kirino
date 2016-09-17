@@ -1,0 +1,55 @@
+<nav class="nav md-depth-2 side-m side-l">
+    <img src="img/kirino.svg" class="logo">
+    <h1 class="logo">Kirino</h1>
+    <span class="fa fa-bars menu-icon"></span>
+    <ul>
+        <li><a><img src="img/elementary.png" alt="Elementary OS"> elementary OS</a></li>
+        <li><a><img src="img/ubuntu.svg" alt="Ubuntu Touch"> Ubuntu Touch</a></li>
+    </ul>
+</nav>
+
+
+<div class="align-center">
+
+        <div class="row">
+
+        </div>
+
+        <form id="login" method="post" class="active md-depth-3"> 
+            <h2 class="toolbar">Log In</h2>
+            <input type="email"  name="email" placeholder="Mail" required/>
+            <input type="password"  name="pass" placeholder="Password" required/>
+            <span id="lstatus"></span>
+            <button type="submit" id="logins">Log In</button>
+            <button id="registerb" type="button">Register</button>
+        </form>
+
+
+        
+        <form id="register" method="post">
+            <h2>Register</h2>
+            <div>
+            <input type="text" name = "name" placeholder="Full Name" required/>
+            </div>
+            <div>
+            <input type="text" name = "nickname" placeholder="I want to be called" required/>
+            </div>
+            <div>
+            <input type="email"  name = "mail" placeholder="Mail" required/>
+            </div>
+            <div>
+            <input type="password"  name = "pass" placeholder="Password" required/>
+            </div>
+            <div>
+            <input type="password" name = "passr" placeholder="Repeat Password" required/>
+            </div>
+            <span id="rstatus"></span>
+            <div>
+            <input type="submit" id="registers" value="Register"/>
+            <input id="loginb" type="button" value="LogIn"/>
+            </div>
+        </form>
+        <footer><a href="https://hyuchia.com">Hyuchia</a> &copy; {{year}}</footer>
+         
+    </div>
+

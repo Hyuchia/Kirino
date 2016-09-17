@@ -1,0 +1,216 @@
+/** Space for all imported Fonts **/
+
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+
+/** Main Style goes here**/
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+}
+
+h1 {
+    margin: 0;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+footer img {
+    height: 1em;
+}
+
+.nav ul {
+    display: inline-block;
+}
+
+.nav ul > li {
+    display: inline-block;
+    width: auto;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav ul > li:empty {
+    padding: 1em 0.5em;
+    color: rgba(66,66,66,0.53);
+}
+
+.nav ul > li:hover {
+    color: rgba(66,66,66,0.87);
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+
+/** Main Screen **/
+
+#output {
+	margin: auto;
+	margin-top: 2em;
+	background-color: #fff;
+	height: 60vh;
+	width: 80%;
+	text-align: left;
+	border-radius: 2.5px;
+	padding-left: 0.3em;
+	padding-top: 0.2em;
+	overflow-y: auto;
+}
+
+#output p {
+    margin: 2em 0;
+}
+
+
+#output p span {
+    padding: 0.5em 1em;
+    border-radius: 5em;
+}
+
+.user {
+    text-align: right;
+}
+
+.user span {
+    background: rgba(60,179,204, 1);
+    color: #fff;
+}   
+
+.kirino span {
+    background: rgba(0,0,0,0.06); 
+} 
+
+section[data-content="main"] form {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 10em;
+    margin: 1em 0;
+    display: inline-block;
+}
+
+section[data-content="main"] form input {
+    color: #424242;
+    background: transparent;
+    border: none;
+    border-radius: 5em;
+    outline: none;
+    padding: 0.5em;
+}
+
+section[data-content="main"] form button{
+    padding: 0.5em;
+    color: #fff;
+    border-radius: 5em;
+    background: #f16272;
+    cursor: pointer;
+}
+
+/** Settings Section **/
+
+section[data-content="settings"] form input, section[data-content="settings"] form select {
+    display: block;
+    margin: 0.7em auto;
+    background: rgba(0,0,0,0.06); 
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    border-radius: 5em;
+}
+
+section[data-content="settings"] form input[type="checkbox"] {
+    display: inline-block;
+}
+
+section[data-content="settings"] form button {
+    padding: 0.5em;
+    color: #fff;
+    border-radius: 5em;
+    background: #f16272;
+}
+
+/** Help Section **/
+
+section[data-content="help"] {
+    margin: 0 auto;
+}
+
+section[data-content="help"] h2 {
+    text-align: center;
+}
+
+
+/** Place here all Media Queries and it's styles.**/
+
+/** Default Style. Don't change. (320px) **/
+@media screen and  (max-width: 20em) {}
+
+/** Extra Small Devices, Phones (480px) **/
+@media screen and (min-width : 30em) {
+    .nav ul > li:empty {
+        padding: 1em;
+    }
+}
+
+/** Medium Screens, Tablets (601px) **/
+@media screen and (min-width: 37.56255em) {
+    footer {
+        display: block;
+    }
+    section[data-content="help"] {
+        width: 70%;
+    }
+}
+
+/** Medium Devices, Desktops (992px)**/
+@media screen and (min-width: 62em) {
+    section[data-content="help"] {
+        width: 60%;
+    }
+}
+
+/** HD Screen, Large Devices, Wide Screens (1200px) **/
+@media screen and (min-width: 75em) {
+    #output {
+        width: 70%;
+    }
+}
+
+/** Full HD Screen, Large Devices, Wide Screens (1920px) **/
+@media screen and (min-width: 120em) {
+
+}
+
+/** Retina Screen , Large Devices, Wide Screens(2560px) **/
+@media screen and (min-width: 160em) {
+
+}
+
+/** 4k Screens, Large Devices, Wide Screens (3840px) **/
+@media screen and (min-width: 240em) {
+
+}
+
+/** 5k Screens, Large Devices, Wide Screens (5120px) **/
+@media screen and (min-width: 320em) {
+
+}
+
+/** CSS for Printing **/
+@media print {
+
+}
+
