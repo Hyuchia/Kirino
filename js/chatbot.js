@@ -249,6 +249,22 @@ class ChatBot {
                         return found.bio;
                     }
 				break;
+
+            case " WHEN DID ":
+                var found = this.find_event (Text.getSuffix (input, key));
+
+                if (found != null) {
+                    return found.date;
+                }
+                break;
+
+            case " WHAT HAPPENED IN ":
+				var found = this.find_event (Text.getSuffix (input, key));
+
+                if (found != null) {
+                    return found.description;
+                }
+				break;
 			
 			/*case " REMEMBER ME ":
 			case " REMEMBER ME TO ":
@@ -260,21 +276,6 @@ class ChatBot {
 					setTimeout("alert(k.getData('Task'))",300000);
 
 				break;
-			
-			
-
-			case " WHEN DID ":
-					
-				if ($_.text.getSuffix(input,key).indexOf(" HAPPENED ")>-1){
-					return this.findEvents($_.text.getSuffix(input,key).trim(),"when");
-					
-				}
-				break;
-				
-			case " WHAT HAPPENED IN ":
-					return this.findEvents($_.text.getSuffix(input,key).trim(),"what");
-					break;
-			case " SOLVE ":
 					
 					return eval(this.transOps($_.text.getSuffix(input,key))).toString();
 					break;
@@ -292,6 +293,18 @@ class ChatBot {
             for (var j in this.knowledge.People[i].name) {
                 if (looking.indexOf (this.knowledge.People[i].name[j]) > -1) {
                     return this.knowledge.People[i];
+                }
+            }
+        }
+        return null;
+    }
+
+    find_event (text) {
+        var looking = " " + text.trim() + " ";
+        for (var i in this.knowledge.Events) {
+            for (var j in this.knowledge.Events[i].name) {
+                if (looking.indexOf (this.knowledge.Events[i].name[j]) > -1) {
+                    return this.knowledge.Events[i];
                 }
             }
         }

@@ -180,44 +180,44 @@ var Knowledge = {
   },
   "Events": [
     {
-      "event": [
+      "name": [
         " WW1 ",
         " WORLD WAR ONE ",
         " WWI ",
         " WORLD WAR 1 "
       ],
-      "what": "On June 28, 1914, in an event that is widely regarded as sparking the outbreak of World War I, Archduke Franz Ferdinand, heir to the Austro-Hungarian empire, was shot to death with his wife by Bosnian Serb Gavrilo Princip in Sarajevo, Bosnia.",
-      "when": "28 July 1914 \u2013 11 November 1918"
+      "description": "On June 28, 1914, in an event that is widely regarded as sparking the outbreak of World War I, Archduke Franz Ferdinand, heir to the Austro-Hungarian empire, was shot to death with his wife by Bosnian Serb Gavrilo Princip in Sarajevo, Bosnia.",
+      "date": "28 July 1914 \u2013 11 November 1918"
     },
     {
-      "event": [
+      "name": [
         " WW2 ",
         " SECOND WORLD WAR ",
         " WWII ",
         " WORLD WAR 2 "
       ],
-      "what": "That's a really long story, and I think you should better google it, since you need a lot of information of this.",
-      "when": "1939 - 1945"
+      "description": "That's a really long story, and I think you should better google it, since you need a lot of information of this.",
+      "date": "1939 - 1945"
     },
     {
-      "event": [
+      "name": [
         " ATOMIC BOMBINGS OF HIROSHIMA AND NAGASAKI  ",
         " BOMBINGS OF HIROSHIMA AND NAGASAKI ",
         " HIROSHIMA AND NAGASAKI ATOMIC BOMBINGS ",
         " HIROSHIMA AND NAGASAKI BOMBINGS "
       ],
-      "what": "During the final stage of the Second World War, the United States dropped atomic bombs on the Japanese cities of Hiroshima and Nagasaki.",
-      "when": "August 1945"
+      "description": "During the final stage of the Second World War, the United States dropped atomic bombs on the Japanese cities of Hiroshima and Nagasaki.",
+      "date": "August 1945"
     },
     {
-      "event": [
+      "name": [
         " 911  ",
         " SEPTEMBER 11 ATTACKS ",
         " WORLD TRADE CENTER ATTACK ",
         " TWIN TOWERS ATTACK "
       ],
-      "what": "The September 11 attacks were a series of four coordinated terrorist attacks by the Islamic terrorist group al-Qaeda on the United States in New York City and the Washington, D.C., metropolitan area on Tuesday, September 11, 2001. ",
-      "when": "Tuesday, September 11, 2001"
+      "description": "The September 11 attacks were a series of four coordinated terrorist attacks by the Islamic terrorist group al-Qaeda on the United States in New York City and the Washington, D.C., metropolitan area on Tuesday, September 11, 2001. ",
+      "date": "Tuesday, September 11, 2001"
     }
   ],
   "People": [
