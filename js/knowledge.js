@@ -66,95 +66,95 @@ var Knowledge = {
   ],
   "memory_fix": [
     [
-      "I'M",
+      " I'M ",
       " YOU ARE "
     ],
     [
-      "I'M",
+      " I'M ",
       " YOU'RE "
     ],
     [
-      "ME",
+      " ME ",
       " YOU "
     ],
     [
-      "I",
+      " I ",
       " YOU "
     ],
     [
-      "MY",
+      " MY ",
       " YOUR "
     ],
     [
-      "I'VE",
+      " I'VE ",
       " YOU'VE "
     ],
     [
-      "I'D",
+      " I'D ",
       " YOU'D "
     ],
     [
-      "AM",
+      " AM ",
       " ARE "
     ],
     [
-      "WASN'T",
+      " WASN'T ",
       " WEREN'T "
     ],
     [
-      "WASN'T",
+      " WASN'T ",
       " WEREN'T "
     ],
     [
-      "MYSELF",
+      " MYSELF ",
       " YOURSELF "
     ],
     [
-      "WAS",
+      " WAS ",
       " WERE "
     ],
     [
-      "DAD",
+      " DAD ",
       " FATHER "
     ],
     [
-      "MOM",
+      " MOM ",
       " MOTHER "
     ],
     [
-      "DREAM",
+      " DREAM ",
       " DREAMS "
     ],
     [
-      "WERE",
+      " WERE ",
       " WAS "
     ],
     [
-      "MY",
+      " MY ",
       " YOUR "
     ],
     [
-      "MINE",
+      " MINE ",
       " YOUR "
     ],
     [
-      "THIS",
+      " THIS ",
       " THAT "
     ],
     [
-      "I'LL",
+      " I'LL ",
       " YOU'LL "
     ],
     [
-      "THESE",
+      " THESE ",
       " THOSE "
     ],
     [
-      "THESE",
+      " THESE ",
       " THOSE "
     ],
     [
-      "AM I",
+      " AM I ",
       " YOU ARE "
     ]
   ],

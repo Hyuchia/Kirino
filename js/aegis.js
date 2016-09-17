@@ -516,6 +516,13 @@ class Storage {
 */
 
 class Text {
+	
+	static replace(key, replacement, text) {
+        if (text.indexOf(key) > -1) {
+            return text.replace(key, replacement);
+        }
+        return text;
+    }
 
     static capitalize(text){
         return text.charAt(0).toUpperCase() + text.slice(1);
@@ -562,7 +569,7 @@ class Text {
     }
 	
 	static clean (text, regex) {
-		return text.replace(new RegExp(regex, "g"), "");
+		return text.replace(regex, "");
 	}
 
     static removeSpecialCharacters(text){

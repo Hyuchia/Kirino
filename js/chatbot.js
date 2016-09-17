@@ -33,6 +33,7 @@ class ChatBot {
         this.dotted_input = null;
         this.context = [];
         this.context_response = [];
+        this.suffix_temp = [];
     }   
 
     greet () {
@@ -47,20 +48,17 @@ class ChatBot {
         while (possible === this.previous_response) {
             possible = list[Math.floor (list.length * Math.random ())];
         }
-        //possible = this.insertResources(possible);
+        
+        possible = this.insert_resources (possible);
         this.previous_response = possible;
-
         return possible;
     }
 
     converse (input){
         this.original_input = input;
         var user_input = this.fix_typos (" " + input.toUpperCase () + " ");
-       // this.dotted_input = Text.clean (user_input, "(,|\"|\-|_|;|:|\{|\}|!|#|\$|%|\&|\/|\(|\)|\\\\?|\\\\*)");
-        console.log(user_input);
-        //user_input = Text.clean (user_input, "(\.|,|\"|\-|_|;|:|\{|\}|!|#|\$|%|\&|\/|\(|\)|\\\\?|\\\\*)");
-
-        console.log(user_input);
+        this.dotted_input = user_input.replace(/[,";:{}!#$%&\/\?]/g, "");
+        user_input = this.dotted_input.replace (/\./g, "");
 
         this.memory.add (user_input);
 
@@ -90,8 +88,6 @@ class ChatBot {
         return text;
     }
 
-
-
     find_match (text){
         if (this.context.length > 0) {
             
@@ -99,12 +95,12 @@ class ChatBot {
         
         var normal_responses = this.get_responses (text);
 
-        /*if (this.match != null) {
-             var actions_responses = actions (text, this.match);
+        if (this.match != null) {
+             var actions_responses = this.actions (text, this.match);
              if (actions_responses != "") {
                 return [actions_responses];
             }
-        }*/
+        }
 
         return normal_responses;
     }
@@ -113,12 +109,13 @@ class ChatBot {
         var response_list = [];
         var best_match = null;
         var current_match = "";
-        var score = -1;
+        var score = 0;
        
         for (var i in this.knowledge.Dialogs) {  
             var temp_match = this.dialog_match (text, this.knowledge.Dialogs[i]);
             if (temp_match.length > 0 && temp_match.length > score) {
                 best_match = this.knowledge.Dialogs[i];
+                console.log(current_match);
                 current_match = temp_match;
                 score = current_match.length;
             }
@@ -137,10 +134,188 @@ class ChatBot {
     dialog_match (text, dialog) {
          for (var i in dialog.input) {
             if (text.indexOf (dialog.input[i]) > -1) {
+                console.log(dialog.input[i]);
                 return dialog.input[i];
             }
         }
         return "";
+    }
+
+    actions (input, key) {
+        switch(key){
+			case " OPEN ":
+					var webpage = "http://" + Text.getSuffix(this.dotted_input, key).trim();
+					window.open(webpage,'','width=600,height=460,menubar=no,location=no,status=no'); 
+				break;
+			
+			case " GOOGLE POST ":
+			case " POST TO GOOGLE ":
+					window.open('https://plus.google.com/share?ur\l='+encodeURIComponent(location), 
+										'Share to Google +' ,'width=600,height=460,menubar=no,location=no,status=no'); 
+				break;
+			
+			case " FACEBOOK POST ":
+			case " POST TO FACEBOOK ":
+					window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location), 'Share to Facebook   ',
+										'width=600,height=460,menubar=no,location=no,status=no'); 
+				break;
+			
+			case " TWEET ":
+			case " POST TO TWITTER ":
+			case " TWITTER POST ":
+					window.open('https://twitter.com/intent/tweet', 
+				  						'Share to Twitter    ','width=600,height=460,menubar=no,location=no,status=no'); 
+				break;
+				
+			/*case " WEATHER IN ":
+			case " CLIMATE IN ":
+					return this.getWeather($_.text.getSuffix(input,key));
+				break;
+			
+			
+			case " WEATHER ":
+			case " CLIMATE ":
+					return this.getWeather();
+				break;*/
+			
+			case " SEARCH ":
+			case " SEARCH FOR ":
+			case " LOOK UP ":
+			case " LOOK UP FOR ":
+			case " LOOK FOR ":
+					window.open(this.user.getSearchEngineLink() + Text.getSuffix (input, key).toLowerCase ());  
+				break;	
+			
+			case " YOUTUBE ":
+			case " VIDEOS OF ":
+			case " VIDEO OF ":
+					window.open("http://www.youtube.com/results?search_query=" + Text.getSuffix (input, key).toLowerCase ());
+				break;
+				
+			case " SEND MAIL TO ":
+			case " MAIL TO ":
+			case " MAILTO ":
+					var subject = prompt ("Write the Subject");
+					var body = prompt ("Write the Body");
+					var mail = Text.getSuffix (this.dotted_input, key).toLowerCase ();
+					window.open ('mailto:' + mail + '?subject=' + subject + '&body=' + body);
+				break;
+				
+			case " DEFINE ":
+					window.open (("https://www.google.com/search?q=define+"+ Text.getSuffix (input, key).toLowerCase ())); 
+				break;
+			
+			case " OPEN NEW DOC ":
+			case " OPEN A NEW DOC ":
+			case " OPEN A NEW DOCUMENT ":
+			case " NEW DOCUMENT ":
+					window.open ("https://docs.google.com/document/create?usp=chrome_app&authuser=0");
+				break;
+			
+			case " SHOW ME ":
+			case " SHOW ME PICTURES OF ":
+			case " SHOW ME SOME ":
+			case " PICTURES OF ":
+			case " PHOTOS OF ":
+			case " IMAGES OF ":
+					var img = Text.getSuffix (input, key).toLowerCase ();
+					window.open(this.user.getSearchEngineImageLink() + img);
+				break;
+			
+			case " GRAPH ":
+					window.open("http://graph.tk#" + Text.getSuffix(this.dotted_input, key).toLowerCase(),
+								'Graph','width=600,height=460,menubar=no,location=no,status=no');
+				break;
+
+            case " CHEAT CODES FOR ":
+			case " CHEATS FOR ":
+					window.open(("http://www.gamesradar.com/search/?content=cheats&platform=all-platforms&q="
+								+Text.getSuffix(input, key).toLowerCase())); 
+					break;
+
+			case " MAPS ":
+				window.open(("https://www.google.com/maps/search/" + Text.getSuffix (input, key).toLowerCase ())); 
+				break;
+
+            case " CALL ":
+				window.open (("tel:" + Text.getSuffix (input, key).toLowerCase ())); 
+				break;
+    
+            case " WHO IS ":
+			case " WHO WAS ":
+                    var found = this.find_people (Text.getSuffix (input, key));
+
+                    if (found != null) {
+                        return found.bio;
+                    }
+				break;
+			
+			/*case " REMEMBER ME ":
+			case " REMEMBER ME TO ":
+			case " REMIND ME ":
+			case " REMIND ME TO ":
+					var task= $_.text.getSuffix(input,key).toLowerCase().charAt(0).toUpperCase() 
+							+ $_.text.getSuffix(input,key).toLowerCase().slice(1);
+					$_.storage.set("Task",task);
+					setTimeout("alert(k.getData('Task'))",300000);
+
+				break;
+			
+			
+
+			case " WHEN DID ":
+					
+				if ($_.text.getSuffix(input,key).indexOf(" HAPPENED ")>-1){
+					return this.findEvents($_.text.getSuffix(input,key).trim(),"when");
+					
+				}
+				break;
+				
+			case " WHAT HAPPENED IN ":
+					return this.findEvents($_.text.getSuffix(input,key).trim(),"what");
+					break;
+			case " SOLVE ":
+					
+					return eval(this.transOps($_.text.getSuffix(input,key))).toString();
+					break;
+					
+			*/
+			default:
+				break;
+		}
+		return "";
+    }
+
+    find_people (text) {
+        var looking = " " + text.trim() + " ";
+        for (var i in this.knowledge.People) {
+            for (var j in this.knowledge.People[i].name) {
+                if (looking.indexOf (this.knowledge.People[i].name[j]) > -1) {
+                    return this.knowledge.People[i];
+                }
+            }
+        }
+        return null;
+    }
+    
+    insert_resources (possible) {
+        var now = new Date ();
+
+        possible = Text.replace ("@date", (now.getMonth () + 1) + '/' + now.getDate () + '/' + now.getFullYear (), possible);
+    
+        var recall = this.memory.recall ();
+        if (recall != null) {
+            possible = Text.replace ("@memory", recall, possible);
+        }
+
+        if (this.suffix_temp.length > 0) {
+            possible = Text.replace ("@suffix", recall, this.suffix_temp.pop ());
+        }        
+
+        possible = Text.replace ("@user", this.user.getName (), possible);
+        possible = Text.replace ("@kirino", this.assistant.getName (), possible);
+        
+        return possible;
     }
 
 /*    
@@ -158,118 +333,9 @@ class ChatBot {
 
     
 
-    private string insert_resources(string possible){
-        string result = possible;
-        var now = new DateTime.now_local ();
-
-        result = Text.replace ("@date", "%d/%d/%d".printf (now.get_month () + 1, now.get_day_of_month (), now.get_year ()), result);
     
-        string? recall = memory.recall ();
-        if (recall != null) {
-            result = Text.replace ("@memory", recall, result);
-        }
 
-        result = Text.replace ("@suffix", user.getName (), result);
-
-        if (result.index_of("@suffix") > -1){
-            result = result.replace("@suffix", (string) suffix_temp.last());
-            suffix_temp.remove((string) suffix_temp.last());
-        }        
-
-        result = Text.replace ("@user", user.getName (), result);
-        result = Text.replace ("@kirino", assistant.getName (), result);
-        
-        return result;
-    }
-
-    public string actions(string input, string key){
-
-        switch(key){
-
-            case " OPEN ":
-                string webpage = "http://" + Text.get_suffix (dotted_input, key);
-                open_url(webpage);
-                break;
-
-            case " GOOGLE POST ":
-            case " POST TO GOOGLE ":
-                open_url("https://plus.google.com/share?url=" + "http://kirino.hyuchia.com");
-                break;
-
-            case " FACEBOOK POST ":
-            case " POST TO FACEBOOK ":
-                open_url("https://www.facebook.com/sharer/shardotted_inputer.php?u=" + "http://kirino.hyuchia.com");
-                break;
-
-            case " TWEET ":
-            case " POST TO TWITTER ":
-            case " TWITTER POST ":
-                open_url("https://twitter.com/intent/tweet");
-                break;
-
-            case " SEARCH ":
-            case " SEARCH FOR ":
-            case " LOOK UP ":
-            case " LOOK UP FOR ":
-            case " LOOK FOR ":
-                open_url(user.getSearchEngineLink() + Text.get_suffix (input, key).down());
-                break;
-
-            case " YOUTUBE ":
-            case " VIDEOS OF ":
-            case " VIDEO OF ":
-                open_url("http://www.youtube.com/results?search_query=" + Text.get_suffix (input, key).down());
-                break;
-
-            case " SHOW ME ":
-            case " SHOW ME PICTURES OF ":
-            case " SHOW ME SOME ":
-            case " PICTURES OF ":
-            case " PHOTOS OF ":
-            case " IMAGES OF ":
-                open_url(user.getSearchEngineImageLink() + Text.get_suffix (input, key).down());
-                break;
-
-            case " WHO IS ":
-            case " WHO WAS ":
-                Person? found = find_people (Text.get_suffix (input, key));
-
-                if (found != null) {
-                    return found.bio;
-                }
-                break;
-            case " UPDATE SYSTEM ":
-            case " UPDATE MY SYSTEM ":
-                update();
-                break;
-            
-            case " SCREENSHOT ":
-                run_command ("screenshot-tool -s -d 3");
-                break;
-
-            case " SCREENSHOT AREA ":
-                run_command ("screenshot-tool -r");
-                break;
     
-            default:
-                break;
-        }
-
-        return "";
-
-    }
-
-    public Person? find_people (string text) {
-        string looking = " " + text.strip() + " ";
-        foreach (Person person in knowledge.people) {
-            foreach (string name in person.name) {
-                if (looking.index_of (name) > -1) {
-                    return person;
-                }
-            }
-        }
-        return null;
-    }
 
     public void open_url(string url){
         run_command ("xdg-open '" + url + "'");
