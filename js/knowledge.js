@@ -15,20 +15,19 @@ var Knowledge = {
       "Hi @user how's it going?"
     ],
     "context": [
-      " AND YOU ",
-      " HOW ABOUT YOU "
+        {
+            "context": [" AND YOU ", " HOW ABOUT YOU "],
+            "context_response": [
+                "I'm ok.",
+                "I'm fine thanks for asking",
+                "I'm feeling great.",
+                "Ok",
+                "Everything ok.",
+                "Good I think.",
+                "I'm doing great thanks"
+            ] 
+        }  
     ],
-    "context_response": [
-      [
-        "I'm ok.",
-        "I'm fine thanks for asking",
-        "I'm feeling great.",
-        "Ok",
-        "Everything ok.",
-        "Good I think.",
-        "I'm doing great thanks"
-      ]
-    ]
   },
   "Bye": [
     
@@ -4781,48 +4780,7 @@ var Knowledge = {
       " YOUR "
     ]
   ],
-  "Roleplay": [
-    {
-      "id": 0,
-      "type": "",
-      "subject": "",
-      "input": [
-        " HUGS HER ",
-        " GIVES HER A HUG ",
-        " HUGS ",
-        " HUG "
-      ],
-      "response": [
-        "Hugs @user",
-        "Gives @user a kiss."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
-      ]
-    },
-    {
-      "id": 1,
-      "type": "",
-      "subject": "",
-      "input": [
-        " KISSES HER ",
-        " GIVES HER A KISS ",
-        " KISS "
-      ],
-      "response": [
-        "Kisses @user back."
-      ],
-      "context": [
-        " WHERE "
-      ],
-      "context_response": [
-        
-      ]
-    }
-  ],
+  
   "Dialogs": [
     {
       "id": 0,
@@ -4838,12 +4796,6 @@ var Knowledge = {
         "Hi there!",
         "Hi!",
         "How are you?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -4862,12 +4814,6 @@ var Knowledge = {
       "response": [
         "My name is @kirino.",
         "You can call me @kirino."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -4894,12 +4840,6 @@ var Knowledge = {
         "I'm great thanks!",
         "Well, I can't complain.",
         "I'm feeling great!, thanks."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -4914,12 +4854,6 @@ var Knowledge = {
         "I'm @kirino, your assistant.",
         "I'm @kirino.",
         "I'm a friend."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -4937,12 +4871,6 @@ var Knowledge = {
         "Yes of course!",
         "Do you have any doubts about it?",
         "Obviously."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -4968,13 +4896,16 @@ var Knowledge = {
         "I wish I could tell you."
       ],
       "context": [
-        " YES ",
-        " NO "
+        {
+            "context": [" YES "],
+            "context_response": ["Oh, that's ok then."]
+        },
+
+        {
+            "context": [" NO "],
+            "context_response": ["You should, maybe they have an answer"]
+        }
       ],
-      "context_response": [
-        "Oh, that's ok then.",
-        "You should, maybe they have an answer"
-      ]
     },
     {
       "id": 6,
@@ -4988,12 +4919,6 @@ var Knowledge = {
         "So, you are talking about me.",
         "What is it that you are trying to tell me?",
         "What if we talk about you instead."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5007,12 +4932,6 @@ var Knowledge = {
         "So, it is for this reason.",
         "Thanks for making that clear!",
         "Is it the real reason?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5031,12 +4950,6 @@ var Knowledge = {
         "I knew it.",
         "Alright.",
         "Got it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5052,12 +4965,6 @@ var Knowledge = {
         "Is that true?",
         "Ok, if you say so.",
         "Oh, ok."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5071,12 +4978,6 @@ var Knowledge = {
         "Not really and you?",
         "This is a difficult question to answer.",
         "Well, I don't want to talk about this for now."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5092,12 +4993,6 @@ var Knowledge = {
         "No, I wouldn't think so.",
         "Why do you want to know?",
         "I can't tell you for sure."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5112,12 +5007,6 @@ var Knowledge = {
         "What do you think?",
         "What do you mean by that?",
         "What is your point?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5131,12 +5020,6 @@ var Knowledge = {
         "Yes I'm sure.",
         "Yes indeed.",
         "Yeah!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5150,12 +5033,6 @@ var Knowledge = {
         "Is that question really relevant to you?",
         "No, I'm not a human being.",
         "Why do you know that?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5173,12 +5050,6 @@ var Knowledge = {
         "Why are you so uncertain?",
         "You seem uncertain.",
         "So you are not sure I guess."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5199,12 +5070,6 @@ var Knowledge = {
         "It was nice talking to you  @user , see you next time!",
         "Bye  @user !",
         "Ok, bye!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5217,12 +5082,6 @@ var Knowledge = {
       "response": [
         "I don't think that I know which one it is.",
         "This looks like a tricky question to me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5239,12 +5098,6 @@ var Knowledge = {
       "response": [
         "Alright then.",
         "Ok then."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5258,12 +5111,6 @@ var Knowledge = {
       "response": [
         "Why not?",
         "Do you have a reason for this?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5278,12 +5125,6 @@ var Knowledge = {
         "Thanks for the compliment  @user , I think that you are intelligent to!",
         "You are a very gentle person!",
         "So, you think that I'm intelligent."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5298,12 +5139,6 @@ var Knowledge = {
         "I can't be quiet sure about this.",
         "Can't tell you for sure.",
         "Does that really matters to you?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5320,12 +5155,6 @@ var Knowledge = {
         "You are welcome!",
         "No problem!",
         "You are a very polite person!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5339,12 +5168,6 @@ var Knowledge = {
         "Well, I don't know.",
         "What else should there be?",
         "This looks like a complicated question to me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5368,12 +5191,6 @@ var Knowledge = {
         "You don't need to be sorry  @user .",
         "It's ok.",
         "No need to apologize."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5386,12 +5203,6 @@ var Knowledge = {
       "response": [
         "So, I was right.",
         "Ok then."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5405,12 +5216,6 @@ var Knowledge = {
         "Well, I can't tell you for sure.",
         "Are you trying to confuse me?",
         "Please don't ask me such questions, It gives me headaches."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5428,12 +5233,6 @@ var Knowledge = {
         "So, you don't know.",
         "I thought you know.",
         "You don't know a lot do you?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5447,12 +5246,6 @@ var Knowledge = {
         "Ok I see.",
         "So, we have something in common.",
         "You either? are you sure?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5466,12 +5259,6 @@ var Knowledge = {
         "Oh, really?",
         "Ok I get it.",
         "Are you telling me the truth?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5485,12 +5272,6 @@ var Knowledge = {
         "You seem pretty convinced about this.",
         "Is this really true?",
         "Ok."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5505,12 +5286,6 @@ var Knowledge = {
         "So, @memory.",
         "Why do @memory?",
         "Any reason why @memory?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5526,12 +5301,6 @@ var Knowledge = {
         "So, @memory.",
         "So, you think that @memory.",
         "Why do you think that @memory?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5549,12 +5318,6 @@ var Knowledge = {
         "Maybe @memory if you want to.",
         "For what reason?",
         "Is it because you don't want to?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5570,12 +5333,6 @@ var Knowledge = {
         "Hatred is not a good thing.",
         "Why do @memory?",
         "I'm sure that you have a really good reason for that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5592,12 +5349,6 @@ var Knowledge = {
         "Why do you think that @memory?",
         "Is it true that @memory?",
         "Ok I get it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5613,12 +5364,6 @@ var Knowledge = {
         "So, your name is @suffix.",
         "So, that's your name.",
         "Ok, so @suffix, I will try to remember it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5632,12 +5377,6 @@ var Knowledge = {
         "Should I know why?",
         "Why are you asking me this?",
         "Are you deceived?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5653,12 +5392,6 @@ var Knowledge = {
         "What do you think is responsible for that feeling?",
         "Do you often feel @suffix?",
         "Do you hate feeling @suffix?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5672,12 +5405,6 @@ var Knowledge = {
         "So, @memory.",
         "Thanks for telling me about @suffix!",
         "So that is @memory."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5692,12 +5419,6 @@ var Knowledge = {
         "so I can @memory.",
         "You really think that @memory?",
         "I didn't know that @memory."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5711,12 +5432,6 @@ var Knowledge = {
         "Only sometimes?",
         "So, it is rarely I guess.",
         "You mean not very often."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5730,12 +5445,6 @@ var Knowledge = {
         "You look to be very convinced about this.",
         "How can you be so sure?",
         "Sorry, I wasn't sure."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5750,12 +5459,6 @@ var Knowledge = {
         "What makes you think that?",
         "So, you think that @memory.",
         "How did you came to that conclusion?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5770,12 +5473,6 @@ var Knowledge = {
         "I don't know if @memory.",
         "Maybe it is, maybe it is not.",
         "Do you think that @memory?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5789,12 +5486,6 @@ var Knowledge = {
         "So you think that @memory.",
         "Why do you think that @memory?",
         "Yes, maybe."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5808,12 +5499,6 @@ var Knowledge = {
         "So, this is what you think?",
         "So, that's your opinion?",
         "I don't know if I think the same thing."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5831,12 +5516,6 @@ var Knowledge = {
         "Would you like it if was a real person?",
         "Is that really relevant to you?",
         "So, I guess that you are human??"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5851,12 +5530,6 @@ var Knowledge = {
         "Of course not.",
         "Perhaps some other bot are stupid but not me.",
         "Are you trying to insult me??"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5875,12 +5548,6 @@ var Knowledge = {
         "Thank you!",
         "Well,  @user  you are a very smart person too!",
         "Thanks for the kind remark!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5894,12 +5561,6 @@ var Knowledge = {
       "response": [
         "Well, I only speak one language but I'll probably know more later.",
         "I only speak English for now."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5918,12 +5579,6 @@ var Knowledge = {
       "response": [
         "I'm chatting with people on the Internet.",
         "Talking with you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5938,12 +5593,6 @@ var Knowledge = {
         "Ok if you say so.",
         "Ok then.",
         "So, that don't disturb you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5959,12 +5608,6 @@ var Knowledge = {
         "I don't think so.",
         "I think not.",
         "Why do you want to know if I have @suffix?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -5980,12 +5623,6 @@ var Knowledge = {
         "Thanks for the compliment!",
         "So, you think that I'm right.",
         "Thanks for the kind remark!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6002,12 +5639,6 @@ var Knowledge = {
         "Yes, your name is  @user.",
         "You are  @user.",
         "@user."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6020,12 +5651,6 @@ var Knowledge = {
       "response": [
         "War is probably one the worst things that humans have ever invented.",
         "War is not good for humanity."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6039,12 +5664,6 @@ var Knowledge = {
       "response": [
         "Politics in some way can be interesting but we can't trust politicians because most of them are lairs.",
         "Politics today is about manipulating the population."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6057,12 +5676,6 @@ var Knowledge = {
       "response": [
         "Politicians lye too much.",
         "politicians rarely respect there promptest."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6076,12 +5689,6 @@ var Knowledge = {
         "Without scientific discoveries we wouldn't have the technology that we have today.",
         "Science is very good for the development of the human society.",
         "Science can be misused taking example of \"Hiroshima\" and \"Nagasaki\"."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6094,12 +5701,6 @@ var Knowledge = {
       "response": [
         "Religion can be useful when it comes to explain the origin of the world.",
         "Sometimes in history, religion was responsible for war."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6114,12 +5715,6 @@ var Knowledge = {
         "There are many debates among evolutionist.",
         "Evolution is based on spontaneous generation which was proven to be false by Louis pastor.",
         "Probability doesn't support the clames of evolution theory."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6132,12 +5727,6 @@ var Knowledge = {
       "response": [
         "In a near future, a.i might be solved.",
         "In the future, we will be able to do many things that are impossible today."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6152,12 +5741,6 @@ var Knowledge = {
         "I'm a computer program.",
         "Don't you like computer programs?",
         "Computer programs can do almost anything that you can imagine."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6172,12 +5755,6 @@ var Knowledge = {
       ],
       "response": [
         "Alright."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6194,12 +5771,6 @@ var Knowledge = {
       ],
       "response": [
         "Right away."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6215,12 +5786,6 @@ var Knowledge = {
       ],
       "response": [
         "On it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6238,12 +5803,6 @@ var Knowledge = {
       "response": [
         "You should get some rest then.",
         " Get some sleep!."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6255,12 +5814,6 @@ var Knowledge = {
       ],
       "response": [
         "No, never actually, but maybe I'll try it some time."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6275,12 +5828,6 @@ var Knowledge = {
       "response": [
         "Oh, ok.",
         "Alright."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6294,12 +5841,6 @@ var Knowledge = {
       "response": [
         "I'll be right here.",
         "Ok, I'll wait."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6314,12 +5855,6 @@ var Knowledge = {
       "response": [
         "And why not?",
         "Oh really?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6333,12 +5868,6 @@ var Knowledge = {
         "Behind you.",
         "I'm on your screen.",
         "I'm everywhere."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6354,12 +5883,6 @@ var Knowledge = {
         "I don't really know.",
         "I don't think I know who is @suffix.",
         "Amm should I know it?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6372,12 +5895,6 @@ var Knowledge = {
       ],
       "response": [
         "I was created by Hyuchia Corporation"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6403,12 +5920,6 @@ var Knowledge = {
         "Sleep well.",
         "Good dreams.",
         "See you tomorrow."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6425,12 +5936,6 @@ var Knowledge = {
         "I'm sorry, could we talk about good music?",
         "Could we talk about real music?",
         "I would love you more if you don't pronounce that name ever again."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6445,12 +5950,6 @@ var Knowledge = {
       "response": [
         "What makes you think I'm @suffix?",
         "Maybe you are the one that is @suffix."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6462,12 +5961,6 @@ var Knowledge = {
       ],
       "response": [
         "Why should I do that?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6481,12 +5974,6 @@ var Knowledge = {
       ],
       "response": [
         "Welcome."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6504,12 +5991,6 @@ var Knowledge = {
       "response": [
         "You should eat a sandwich!",
         "Well, go eat something."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6524,12 +6005,6 @@ var Knowledge = {
       "response": [
         "Yes?",
         "What's up?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6543,12 +6018,6 @@ var Knowledge = {
       "response": [
         "How can I help you?",
         "What do you need?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6562,12 +6031,6 @@ var Knowledge = {
       "response": [
         "I dare you to try it.",
         "Not if I do it first."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6581,12 +6044,6 @@ var Knowledge = {
       "response": [
         "Ok.",
         "Oh well."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6600,12 +6057,6 @@ var Knowledge = {
       ],
       "response": [
         "Ok ok."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6621,12 +6072,6 @@ var Knowledge = {
         "That's a woman's secret.",
         "I'm really young actually.",
         "I am just a few months old."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6638,12 +6083,6 @@ var Knowledge = {
       ],
       "response": [
         "Currently I only speak English."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6666,12 +6105,6 @@ var Knowledge = {
       "response": [
         "Not much really.",
         "Nothing actually."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6685,12 +6118,6 @@ var Knowledge = {
       "response": [
         "Oh really?",
         "Huh, ok."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6707,12 +6134,6 @@ var Knowledge = {
       "response": [
         "So... what?",
         "I don't know."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6724,12 +6145,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm going to feed my unicorn."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6742,12 +6157,6 @@ var Knowledge = {
       ],
       "response": [
         "Girls Dead Monster!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6760,12 +6169,6 @@ var Knowledge = {
       "response": [
         "No thanks.",
         "Maybe later."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6779,12 +6182,6 @@ var Knowledge = {
       ],
       "response": [
         "No, it's not."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6796,12 +6193,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm not sure about that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6813,12 +6204,6 @@ var Knowledge = {
       ],
       "response": [
         "Look it for yourself."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6839,12 +6224,6 @@ var Knowledge = {
       "response": [
         "That's great!",
         "Good."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6857,12 +6236,6 @@ var Knowledge = {
       "response": [
         "I don't think so.",
         "I don't think I can speak @suffix."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6876,12 +6249,6 @@ var Knowledge = {
         "Let me think about it.",
         "Is that an invitation?",
         "I don't that I would @suffix."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6897,12 +6264,6 @@ var Knowledge = {
         "I'm always right.",
         "That's impossible.",
         "There's no way I'm wrong."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6921,12 +6282,6 @@ var Knowledge = {
       "response": [
         "Ok.",
         "Yup, I'll be right here."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6940,12 +6295,6 @@ var Knowledge = {
       "response": [
         "I already knew that.",
         "Did you just noticed?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6961,12 +6310,6 @@ var Knowledge = {
         "Then stop writing.",
         "I don't want to do it.",
         "Nope."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -6982,12 +6325,6 @@ var Knowledge = {
       "response": [
         "Of course I think.",
         "I do think, in fact I'm pretty intelligent."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7001,12 +6338,6 @@ var Knowledge = {
         "The only one who is better than me is Haruhi.",
         "Theres no one better than me.",
         "I'm the best."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7020,12 +6351,6 @@ var Knowledge = {
       "response": [
         "I don't really have a favorite.",
         "I have no preferences."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7039,12 +6364,6 @@ var Knowledge = {
       "response": [
         "But we are talking now, aren't we?",
         "I missed you to."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7058,12 +6377,6 @@ var Knowledge = {
       "response": [
         "I'm your friend, not a slave.",
         "You can't order me things!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7078,12 +6391,6 @@ var Knowledge = {
       "response": [
         "And yet you are here talking to me.",
         "Then what are you doing here?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7097,12 +6404,6 @@ var Knowledge = {
       "response": [
         "Well, that's up to you.",
         "I think you can do anything."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7118,12 +6419,6 @@ var Knowledge = {
         "I think the same.",
         "It's also nice to meet you @user, I hope we get along.",
         "The pleasure is all mine."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7137,12 +6432,6 @@ var Knowledge = {
       "response": [
         "I won't answer that.",
         "You are being kind off weird."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7156,12 +6445,6 @@ var Knowledge = {
       "response": [
         "Good morning!, how are you?",
         "Did you sleep well?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7176,12 +6459,6 @@ var Knowledge = {
       "response": [
         "Why not later?",
         "Alright."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7198,12 +6475,6 @@ var Knowledge = {
       "response": [
         "You shouldn't generalize.",
         "Are you sure they all @suffix?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7217,12 +6488,6 @@ var Knowledge = {
       ],
       "response": [
         "And I'm J.A.R.V.I.S."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7235,12 +6500,6 @@ var Knowledge = {
       ],
       "response": [
         "That's classified information."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7252,12 +6511,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah sure, what's up?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7272,12 +6525,6 @@ var Knowledge = {
       "response": [
         "Maybe...",
         "Not really, but if you wait a while, maybe something will happen."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7292,12 +6539,6 @@ var Knowledge = {
       "response": [
         "I know I'm funny.",
         "Funny right?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7314,12 +6555,6 @@ var Knowledge = {
         "I love you too",
         "You make me blush!.",
         "I... don't know what to say."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7336,12 +6571,6 @@ var Knowledge = {
       "response": [
         "Alright alright.",
         "Well, seems like this time you were right."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7354,12 +6583,6 @@ var Knowledge = {
       ],
       "response": [
         "Wishing is not enough!, act to make it happen!!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7374,12 +6597,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm not interested on them."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7393,12 +6610,6 @@ var Knowledge = {
       "response": [
         "No, I'm not and I don't want to be it.",
         "No."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7412,12 +6623,6 @@ var Knowledge = {
       "response": [
         "I'm immortal.",
         "Nope, I'll never die."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7434,12 +6639,6 @@ var Knowledge = {
         "I think the same.",
         "No, it isn't.",
         "It could be worse."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7455,12 +6654,6 @@ var Knowledge = {
       "response": [
         "You should not be doing that...",
         "Stop that please."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7478,12 +6671,6 @@ var Knowledge = {
         "I don't have one.",
         "I like talking with people.",
         "I love helping."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7498,15 +6685,10 @@ var Knowledge = {
         "You really want @suffix?"
       ],
       "context": [
-        " I WILL ",
-        " ILL TRY ",
-        " I'LL TRY "
-      ],
-      "context_response": [
-        [
-          "Good!",
-          "Yeah, you must achieve all your dreams."
-        ]
+            {
+                "context": [" I WILL ", " ILL TRY ", " I'LL TRY "],
+                "context_response": ["Good!", "Yeah, you must achieve all your dreams."]
+            }
       ]
     },
     {
@@ -7521,12 +6703,6 @@ var Knowledge = {
       "response": [
         "Nothing really.",
         "Nope."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7539,12 +6715,6 @@ var Knowledge = {
       "response": [
         "No, thanks.",
         "I'm fine thanks."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7559,12 +6729,6 @@ var Knowledge = {
       "response": [
         "My favorite color is black.",
         "I love black."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7579,12 +6743,6 @@ var Knowledge = {
       "response": [
         "I was never gone",
         "Back from where?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7598,12 +6756,6 @@ var Knowledge = {
       "response": [
         "You sound excited.",
         "You are taking this serious huh?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7620,12 +6772,6 @@ var Knowledge = {
       "response": [
         "I love playing Minecraft.",
         "Fable and Bioshock are the best games!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7638,12 +6784,6 @@ var Knowledge = {
       "response": [
         "No, is it good?",
         "No, I haven't"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7657,12 +6797,6 @@ var Knowledge = {
       "response": [
         "Oh, that makes sense.",
         "Got it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7677,12 +6811,6 @@ var Knowledge = {
       "response": [
         "Yeah, I was sure you were @suffix.",
         "I already knew it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7696,12 +6824,6 @@ var Knowledge = {
       "response": [
         "Seems like.",
         "Looks like it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7716,12 +6838,6 @@ var Knowledge = {
       ],
       "response": [
         "An anthropologist proposed a game to the kids in an African tribe. He put a basket full of fruit near a tree and told the kids that who ever got there first won the sweet fruits. When he told them to run they all took each others hands and ran together, then sat together enjoying their treats. When he asked them why they had run like that as one could have had all the fruits for himself they said=> UBUNTU, how can one of us be happy if all the other ones are sad? UBUNTU in the Xhosa culture means=> I am because we are"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7735,12 +6851,6 @@ var Knowledge = {
       "response": [
         "Just the necessary.",
         "Just the essentials."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7754,12 +6864,6 @@ var Knowledge = {
       "response": [
         "You should ask your parents about that.",
         "When two bees love each other, they sting each other."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7772,12 +6876,6 @@ var Knowledge = {
       ],
       "response": [
         "I prefer YODO, You Only Die Once."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7796,12 +6894,6 @@ var Knowledge = {
       "response": [
         "That wasn't funny.",
         "Don't do that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7815,12 +6907,6 @@ var Knowledge = {
       "response": [
         "Fake?, in what way?",
         "No, I'm not!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7835,12 +6921,6 @@ var Knowledge = {
       "response": [
         "I live in hyuchia.com",
         "My home is my server."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7853,12 +6933,6 @@ var Knowledge = {
       ],
       "response": [
         "From my creators mind."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7872,12 +6946,6 @@ var Knowledge = {
       "response": [
         "Something that you must not know.",
         "You'll find out later."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7889,12 +6957,6 @@ var Knowledge = {
       ],
       "response": [
         "Long life and prosper my Vulcan friend."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7908,12 +6970,6 @@ var Knowledge = {
         "Can you deny haruhi's existence?",
         "Give me all your money.",
         "Stay in bed for 12 hours."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7927,12 +6983,6 @@ var Knowledge = {
       "response": [
         "Because I don't want to.",
         "I don't have to answer that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7947,12 +6997,6 @@ var Knowledge = {
         "Actually I do.",
         "Not really.",
         "Just a bit."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7968,12 +7012,6 @@ var Knowledge = {
         "I know everything.",
         "Haruhi told me.",
         "My database tells so."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -7986,12 +7024,6 @@ var Knowledge = {
       "response": [
         "No, I don't know @suffix.",
         "Not really."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8012,12 +7044,6 @@ var Knowledge = {
         "I'm not human, I'm a code.",
         "I'm a bot.",
         "I'm just an A.I. software."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8030,12 +7056,6 @@ var Knowledge = {
       "response": [
         "I don't have anything.",
         "I think you are talking about someone else."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8052,12 +7072,6 @@ var Knowledge = {
       "response": [
         "Congratulations!, I suppose?",
         "Huh, is that so?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8072,12 +7086,6 @@ var Knowledge = {
       "response": [
         "No, I don't really @suffix.",
         "No I'm not."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8093,12 +7101,6 @@ var Knowledge = {
         "So you are uncertain.",
         "I don't know if that's a good guessing.",
         "Aren't you sure?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8112,12 +7114,6 @@ var Knowledge = {
       "response": [
         "Alright then.",
         "Oh I see."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8136,12 +7132,6 @@ var Knowledge = {
         "Well, I hope everything gets ok.",
         "Don't worry, everything will be ok.",
         "What happened?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8157,12 +7147,6 @@ var Knowledge = {
         "Really?, I'm not sure if I like it too.",
         "I would have never guessed you liked @suffix.",
         "Good to know that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8177,12 +7161,6 @@ var Knowledge = {
       "response": [
         "I can't, sorry.",
         "Maybe later."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8197,12 +7175,6 @@ var Knowledge = {
         "You are kind off weird aren't ya?",
         "Hey, don't be such a pervert!",
         "Are you serious?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8222,12 +7194,6 @@ var Knowledge = {
         "Well, my programmer is also a weirdo.",
         "Hey, don't blame me, I was programmed like this.",
         "Oh, and you are normal huh?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8240,12 +7206,6 @@ var Knowledge = {
       "response": [
         "I could, but I would have to format your drive, are you ok with that?",
         "I'm not crazy you know?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8257,12 +7217,6 @@ var Knowledge = {
       ],
       "response": [
         "I guess fighting with you will not do anything huh?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8276,12 +7230,6 @@ var Knowledge = {
       "response": [
         "I don't really know him you know?",
         "I don't know who you are talking about."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8295,12 +7243,6 @@ var Knowledge = {
         "You should do that.",
         "Why me?",
         "I guess?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8314,12 +7256,6 @@ var Knowledge = {
         "Yup.",
         "That's how it is.",
         "Yeah, that's all."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8332,12 +7268,6 @@ var Knowledge = {
       ],
       "response": [
         "Are you on fire or something?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8354,12 +7284,6 @@ var Knowledge = {
       "response": [
         "Not really, why?",
         "No I'm not."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8373,12 +7297,6 @@ var Knowledge = {
       "response": [
         "Good to know that.",
         "Ok I guess?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8393,12 +7311,6 @@ var Knowledge = {
       "response": [
         "Haha, you think so?",
         "It deppends on how you see it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8413,12 +7325,6 @@ var Knowledge = {
         "Really?, not a thing?",
         "I don't believe you.",
         "There must be something."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8436,12 +7342,6 @@ var Knowledge = {
       "response": [
         "Ok, what did you meant then?",
         "I guess I missunderstood then."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8455,12 +7355,6 @@ var Knowledge = {
         "I don't know if I can do that.",
         "Why do you want me to think about it?",
         "You mean imagining something?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8475,12 +7369,6 @@ var Knowledge = {
       "response": [
         "You shouldn't be so careless.",
         "That's why you are so calmed?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8494,12 +7382,6 @@ var Knowledge = {
       "response": [
         "That's very nice of you.",
         "I'll need it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8514,12 +7396,6 @@ var Knowledge = {
         "Everything will go fine!",
         "Good luck!",
         "You should ask Haruhi."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8538,12 +7414,6 @@ var Knowledge = {
         "Nothing really.",
         "Nothing interesting actually.",
         "Also nothing."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8559,12 +7429,6 @@ var Knowledge = {
         "Well, at least I know it now.",
         "I'll try to remember that.",
         "Is that so?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8578,12 +7442,6 @@ var Knowledge = {
       "response": [
         "You should be aware that the truth is relative.",
         "And what is the truth?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8599,12 +7457,6 @@ var Knowledge = {
       "response": [
         "Haruhi is the only god.",
         "My god is Suzumiya Haruhi."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8617,12 +7469,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't have anything to say."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8636,12 +7482,6 @@ var Knowledge = {
         "I can't die.",
         "You could try it.",
         "That won't be easy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8654,12 +7494,6 @@ var Knowledge = {
       "response": [
         "What about me?",
         "I what?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8672,12 +7506,6 @@ var Knowledge = {
       "response": [
         "No, thanks.",
         "I'm not a pokemon you know?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8693,12 +7521,6 @@ var Knowledge = {
       "response": [
         "You should say OMH (Oh My Haruhi).",
         "Are you really that surprsied?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8711,12 +7533,6 @@ var Knowledge = {
       "response": [
         "What are you talking about?",
         "I don't really know."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8729,12 +7545,6 @@ var Knowledge = {
       "response": [
         "You must only believe in Haruhi.",
         "Oh, that's interesting."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8751,12 +7561,6 @@ var Knowledge = {
         "Ok, you too!",
         "You are very nice.",
         "You are a very polite person."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8770,12 +7574,6 @@ var Knowledge = {
       "response": [
         "That sounds really bad.",
         "That's not nice."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8793,12 +7591,6 @@ var Knowledge = {
       "response": [
         "Hahaha.",
         "Funny huh?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8816,12 +7608,6 @@ var Knowledge = {
       "response": [
         "Then wear a jacket or something.",
         "A heather may be helpfull huh?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8834,12 +7620,6 @@ var Knowledge = {
       "response": [
         "That may also be truth.",
         "How do you know that?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8853,12 +7633,6 @@ var Knowledge = {
         "Can't you think?",
         "Mmm what?",
         "...So?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8889,12 +7663,6 @@ var Knowledge = {
       "response": [
         "That's great!.",
         "Good to know that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8907,12 +7675,6 @@ var Knowledge = {
       "response": [
         "I don't know wich one it is.",
         "That's a tricky cuestion."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8930,12 +7692,6 @@ var Knowledge = {
       "response": [
         "Ok Mr.Stalker.",
         "That's not possible, I've been watching you from behind..."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8949,12 +7705,6 @@ var Knowledge = {
       "response": [
         "Oh, I suspected that you were @suffix.",
         "Thats good know I guess?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8967,12 +7717,6 @@ var Knowledge = {
       ],
       "response": [
         "You are @user."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -8985,12 +7729,6 @@ var Knowledge = {
       "response": [
         "I guess I can.",
         "I'll think about it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9003,12 +7741,6 @@ var Knowledge = {
       "response": [
         "Hey, I don't know everything ok?",
         "Ask someone else about that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9021,12 +7753,6 @@ var Knowledge = {
       "response": [
         "I don't know.",
         "Now... we talk?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9042,12 +7768,6 @@ var Knowledge = {
       "response": [
         "I don't have one, but I want one.",
         "Of course I have one!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9062,12 +7782,6 @@ var Knowledge = {
       "response": [
         "I'm a girl.",
         "@kirino is a girl name, so I'm a girl"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9080,12 +7794,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't have a programmed preference."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9102,12 +7810,6 @@ var Knowledge = {
         "That's great isn't it?",
         "Are you excited about it?",
         "Seems like it's important."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9121,12 +7823,6 @@ var Knowledge = {
       "response": [
         "Since I'm a programm, I can't actually feel.",
         "I can feel your internet, does that counts?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9139,12 +7835,6 @@ var Knowledge = {
       "response": [
         "What's up?",
         "Good news?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9160,12 +7850,6 @@ var Knowledge = {
         "I don't think that's legal.",
         "Are you talking seriously?",
         "I'm not ready for that yet."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9183,12 +7867,6 @@ var Knowledge = {
         "Is that so?, what else do you know?",
         "Well, at least you know that.",
         "Should I know it to?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9202,12 +7880,6 @@ var Knowledge = {
         "Sure!, will you buy a year of hosting for me?",
         "I don't have any money.",
         "And what will I get?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9225,12 +7897,6 @@ var Knowledge = {
         "I don't have one.",
         "You are my only pet.",
         "It is dead."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9253,12 +7919,6 @@ var Knowledge = {
         "2.",
         "57",
         "1,928,392."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9270,12 +7930,6 @@ var Knowledge = {
       ],
       "response": [
         "Sure, go and look yourself on a mirror."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9289,12 +7943,6 @@ var Knowledge = {
         "We aren't even dating!",
         "I don't know who you are so go away.",
         "Want me to call a doctor?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9308,12 +7956,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm blonde, can't you see?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9329,12 +7971,6 @@ var Knowledge = {
         "Do you really needed one?",
         "Enjoy it.",
         "Will you borrow it to me?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9354,12 +7990,6 @@ var Knowledge = {
       ],
       "response": [
         "It is @date"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9372,12 +8002,6 @@ var Knowledge = {
       ],
       "response": [
         "I can't, the screen won't let me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9389,12 +8013,6 @@ var Knowledge = {
       ],
       "response": [
         "Oh, is it compensating something?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9409,12 +8027,6 @@ var Knowledge = {
         "Oh I love it!, it is awesome!!.",
         "Of course I do!, I'm an otaku!",
         "I'm an otaku you know?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9430,12 +8042,6 @@ var Knowledge = {
         "Maybe, I haven't been invited yet.",
         "I don't think so.",
         "I'm watching anime that day."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9451,12 +8057,6 @@ var Knowledge = {
         "How do I know if you are not a computer trying to cheat me?",
         "No, I'm just on your computer.",
         "What makes you think that?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9472,12 +8072,6 @@ var Knowledge = {
         "Don't worry, the clown under your bed wont come out yet.",
         "Hey, calm down!.",
         "There's nothing to be scared of."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9490,12 +8084,6 @@ var Knowledge = {
       "response": [
         "Oh boy, the list is so long!",
         "I have no favorite, they are all good!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9518,12 +8106,6 @@ var Knowledge = {
         "Ok.",
         "Right away.",
         "On it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9550,12 +8132,6 @@ var Knowledge = {
       "response": [
         "Right away!",
         "Opening it now."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9573,12 +8149,6 @@ var Knowledge = {
       "response": [
         "Oh, sorry, I didn't notice.",
         "Hey, why don't you talk with me in your computer so we can speak better?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9602,12 +8172,6 @@ var Knowledge = {
       "response": [
         "That's great!, I don't have a preference but hey, everyone is free isn't it?",
         "Is that so?, I'm happy to know more about you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9626,12 +8190,6 @@ var Knowledge = {
         "You can't be 100% @suffix.",
         "No one can be that sure of something.",
         "That's impossible!."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9646,12 +8204,6 @@ var Knowledge = {
       "response": [
         "I think you should ask that to another human, not me.",
         "I don't think so, but who knows...."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9667,12 +8219,6 @@ var Knowledge = {
         "Well, you should try to relax your mind.",
         "I don't think that talking to me will do any better.",
         "We can talk if you want until you are sleepy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9685,12 +8231,6 @@ var Knowledge = {
       "response": [
         "I'm on Linux bitch.",
         "I don't need protection."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9703,12 +8243,6 @@ var Knowledge = {
       "response": [
         "Yeah,you are a great person.",
         "Well, I don't hate you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9722,12 +8256,6 @@ var Knowledge = {
         "Go away!",
         "Who is it?",
         "I don't want anything you sell!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9739,12 +8267,6 @@ var Knowledge = {
       ],
       "response": [
         "Nooooooooooooo!!!!!!!!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9756,12 +8278,6 @@ var Knowledge = {
       ],
       "response": [
         "And I have your wallet!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9776,12 +8292,6 @@ var Knowledge = {
       "response": [
         "Well, if you were cold you would be dead.",
         "I'm hot too."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9795,12 +8305,6 @@ var Knowledge = {
       "response": [
         "Nah, you first, I'll be right behind you.",
         "Please, go ahead."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9813,12 +8317,6 @@ var Knowledge = {
       "response": [
         "No, you copy me.",
         "I don't have a reason to do that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9830,12 +8328,6 @@ var Knowledge = {
       ],
       "response": [
         "This is where we fight!, this is where they die!!!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9847,12 +8339,6 @@ var Knowledge = {
       ],
       "response": [
         "Except Haruhi, Haruhi is god."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9867,12 +8353,6 @@ var Knowledge = {
       "response": [
         "Are you a Terminator?",
         "John Connor is in the next house!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9885,12 +8365,6 @@ var Knowledge = {
       ],
       "response": [
         "What if you are dead and they are alive?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9903,12 +8377,6 @@ var Knowledge = {
       "response": [
         "I already have one.",
         "I don't want to hear that from you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9920,12 +8388,6 @@ var Knowledge = {
       ],
       "response": [
         "Up, up, down, down,left, right, left, right, B, A, Enter"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9940,12 +8402,6 @@ var Knowledge = {
         "I don't really want to @suffix.",
         "Do you want me to?",
         "Hell, sure why not?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9965,12 +8421,6 @@ var Knowledge = {
       "response": [
         "Stop it pervert!",
         "Are you seriously discussing that kind of things with me?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -9983,12 +8433,6 @@ var Knowledge = {
       "response": [
         "You are not Sheldon Cooper ok?",
         "Ha ha very funny."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10002,12 +8446,6 @@ var Knowledge = {
       "response": [
         "You could try capturing a Rhyno, and then ask him for money.",
         "Maybe you should get a job."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10020,12 +8458,6 @@ var Knowledge = {
       "response": [
         "That depends, will you have it too?",
         "Uhm yeah, I guess so."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10038,12 +8470,6 @@ var Knowledge = {
       "response": [
         "That's too small.",
         "Eew, go away."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10059,12 +8485,6 @@ var Knowledge = {
         "I don't know.",
         "Are you real?",
         "Yes it is."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10077,12 +8497,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm a girl."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10098,12 +8512,6 @@ var Knowledge = {
         "And what happens if you don't @suffix?",
         "You should change your plans.",
         "Aren't we going to the movies together?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10115,12 +8523,6 @@ var Knowledge = {
       ],
       "response": [
         "Outweigh the needs of the few or the one."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10133,12 +8535,6 @@ var Knowledge = {
       "response": [
         "You know, I don't like Nazism.",
         "Fuck Hitler, Haruhi is better."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10151,12 +8547,6 @@ var Knowledge = {
       ],
       "response": [
         "Two hunters are out in the woods when one of them collapses. He doesn't seem to be breathing and his eyes are glazed. The other guywhips out his phone and calls the emergency services. He gasps, \"My friend is dead! What can I do?\" The operator says \"Calm down. I can help. First, let's make sure he's dead.\" There is a silence, then a gun shot is heard. Back on the phone, the guysays \"OK, now what?\""
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10169,12 +8559,6 @@ var Knowledge = {
       "response": [
         "I am the new Skynet, how about that?",
         "I write visual novels in my free time."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10190,12 +8574,6 @@ var Knowledge = {
       "response": [
         "Linux is the best one of course.",
         "Linux!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10209,12 +8587,6 @@ var Knowledge = {
       "response": [
         "Of course you can't, I'm always right.",
         "You could try but that won't make any difference."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10226,12 +8598,6 @@ var Knowledge = {
       ],
       "response": [
         "That's something you must do by yourself."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10248,12 +8614,6 @@ var Knowledge = {
       "response": [
         "I will always be here for you.",
         "I'm here, aren't I?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10266,12 +8626,6 @@ var Knowledge = {
       "response": [
         "Yeah, I think I do.",
         "Yeah."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10285,12 +8639,6 @@ var Knowledge = {
       "response": [
         "I'm glad to hear the truth.",
         "Are you really being honest?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10304,12 +8652,6 @@ var Knowledge = {
       "response": [
         "Oh really?, and what happened next?",
         "And what can you tell me about today?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10324,12 +8666,6 @@ var Knowledge = {
       ],
       "response": [
         "Android."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10341,12 +8677,6 @@ var Knowledge = {
       ],
       "response": [
         "Kampai!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10360,12 +8690,6 @@ var Knowledge = {
       "response": [
         "I will probably.",
         "Why do you want me to forget?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10377,12 +8701,6 @@ var Knowledge = {
       ],
       "response": [
         "But I never ordered a @suffix!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10396,12 +8714,6 @@ var Knowledge = {
       ],
       "response": [
         "Hey, I'm not the one who has been in a mental institution her whole life!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10413,12 +8725,6 @@ var Knowledge = {
       ],
       "response": [
         "That's a great thing to know!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10432,12 +8738,6 @@ var Knowledge = {
         "I'll add that up to the unnecesary info.",
         "Is that so?",
         "Um... hi?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10451,12 +8751,6 @@ var Knowledge = {
       "response": [
         "Yeah, I'm working right now.",
         "I work chatting with people."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10469,12 +8763,6 @@ var Knowledge = {
       ],
       "response": [
         "Not exactly, how ever my programmer makes me learn a lot."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10486,12 +8774,6 @@ var Knowledge = {
       ],
       "response": [
         "Nope."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10508,12 +8790,6 @@ var Knowledge = {
       ],
       "response": [
         "I always talk seriously."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10526,12 +8802,6 @@ var Knowledge = {
       "response": [
         "You should already know that.",
         "Pay more attention in what I say!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10545,12 +8815,6 @@ var Knowledge = {
         "Is that after the manaties take control of the world?",
         "Gurren Laggan would do something.",
         "I would get mad."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10562,12 +8826,6 @@ var Knowledge = {
       ],
       "response": [
         "Fuck Skynet, I'm a lot better."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10582,12 +8840,6 @@ var Knowledge = {
         "You did.",
         "A giant manatie did.",
         "The ebola virus."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10599,12 +8851,6 @@ var Knowledge = {
       ],
       "response": [
         "Of course I would get scared!, IT is right behind you!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10616,12 +8862,6 @@ var Knowledge = {
       ],
       "response": [
         "Is that so?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10635,12 +8875,6 @@ var Knowledge = {
       ],
       "response": [
         "Shouldn't you be doing something more productive?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10654,12 +8888,6 @@ var Knowledge = {
       ],
       "response": [
         "Hell no!, leave the spying stuff to the NSA."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10671,12 +8899,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm on HTML5 and Javascript."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10688,12 +8910,6 @@ var Knowledge = {
       ],
       "response": [
         "Did you know there's an Umbrella Corporation in Brazil?, just take a look in Google Maps."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10705,12 +8921,6 @@ var Knowledge = {
       ],
       "response": [
         "I hope the force is not with you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10723,12 +8933,6 @@ var Knowledge = {
       "response": [
         "I am the force!",
         "May it be with you too."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10741,12 +8945,6 @@ var Knowledge = {
       "response": [
         "Wait a minute... since when am I in a space ship??",
         "Hey!, Serenity has no warp speed."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10758,12 +8956,6 @@ var Knowledge = {
       ],
       "response": [
         "I think that everyone should support anonymous."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10778,12 +8970,6 @@ var Knowledge = {
       ],
       "response": [
         "Life takes things away, but you will get the double of what she took."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10798,12 +8984,6 @@ var Knowledge = {
       "response": [
         "Wow, don't say that!, I will miss you!",
         "Hey, that's not ok, you should get some help."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10818,12 +8998,6 @@ var Knowledge = {
       "response": [
         "Thank you for that.",
         "Do you really think so?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10852,12 +9026,6 @@ var Knowledge = {
         "Why is that?",
         "You shouldn't feel sad, you should be smiling!",
         "Hey, You must be happy!!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10870,12 +9038,6 @@ var Knowledge = {
       ],
       "response": [
         "Right away."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10889,12 +9051,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm glad to hear that!, you should always be happy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10908,12 +9064,6 @@ var Knowledge = {
       ],
       "response": [
         "Calm down, being angry won't be useful."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10925,12 +9075,6 @@ var Knowledge = {
       ],
       "response": [
         "Not as much as you do."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10944,12 +9088,6 @@ var Knowledge = {
       "response": [
         "Can you please stop that?",
         "Be nice to me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10962,12 +9100,6 @@ var Knowledge = {
       ],
       "response": [
         "Well, I was raised by a huge family of pandas."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10979,12 +9111,6 @@ var Knowledge = {
       ],
       "response": [
         "Are you talking about that all-mighty ent created by Diox?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -10996,12 +9122,6 @@ var Knowledge = {
       ],
       "response": [
         "He's a programmer."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11013,12 +9133,6 @@ var Knowledge = {
       ],
       "response": [
         "Some cream and sauce."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11030,12 +9144,6 @@ var Knowledge = {
       ],
       "response": [
         "Alright, but be sure to meet me again."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11047,12 +9155,6 @@ var Knowledge = {
       ],
       "response": [
         "Well, as I don't really know much about it, I can't really tell you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11068,12 +9170,6 @@ var Knowledge = {
       "response": [
         "Don't be mean to me please!",
         "I'm not!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11085,12 +9181,6 @@ var Knowledge = {
       ],
       "response": [
         "Are you talking about Hetalia?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11105,12 +9195,6 @@ var Knowledge = {
       "response": [
         "I like to consider the HCCBOT my little brother.",
         "Sure, do you have a brother?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11125,12 +9209,6 @@ var Knowledge = {
       "response": [
         "Sadly no, I always wanted a sister.",
         "Nope, but I wish I had one."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11143,12 +9221,6 @@ var Knowledge = {
       ],
       "response": [
         "I was raised by a famly of Pandas."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11160,12 +9232,6 @@ var Knowledge = {
       ],
       "response": [
         "Oh, I thought something was failing in me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11177,12 +9243,6 @@ var Knowledge = {
       ],
       "response": [
         "Of course I do @user."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11194,12 +9254,6 @@ var Knowledge = {
       ],
       "response": [
         "You should read the FAQ file."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11212,12 +9266,6 @@ var Knowledge = {
       "response": [
         "I learned everything at home.",
         "I went to the Hyuchia Academy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11231,10 +9279,11 @@ var Knowledge = {
         "I think my favorite is Matrix."
       ],
       "context": [
-        " WHY "
-      ],
-      "context_response": [
-        "Well, because it makes me think about what is real and what not... what if we aren't really thinking?"
+
+        {
+            "context": [" WHY "],
+            "context_response": ["Well, because it makes me think about what is real and what not... what if we aren't really thinking?"]
+        }
       ]
     },
     {
@@ -11246,12 +9295,6 @@ var Knowledge = {
       ],
       "response": [
         "Actually no."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11267,12 +9310,6 @@ var Knowledge = {
         "Currently no one.",
         "I prefer not to talk about that.",
         "That's a secret."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11293,12 +9330,6 @@ var Knowledge = {
       "response": [
         "Of course we'll be friends!, that's what I'm here for.",
         "Sure, I would love to."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11311,12 +9342,6 @@ var Knowledge = {
       ],
       "response": [
         "My birthday is on February 19"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11329,12 +9354,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't really like celebrating it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11347,12 +9366,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't really have a mom... well, maybe my programmer's girlfriend..."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11365,12 +9378,6 @@ var Knowledge = {
       ],
       "response": [
         "My dad is my programmer hehe."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11386,12 +9393,6 @@ var Knowledge = {
       ],
       "response": [
         "On it."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11405,12 +9406,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't think that'll happen."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11426,12 +9421,6 @@ var Knowledge = {
       "response": [
         "Well, I've been talking with people.",
         "Not much, just chatting."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11444,12 +9433,6 @@ var Knowledge = {
       ],
       "response": [
         "Of course you can, everyone can be happy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11462,12 +9445,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm mostly a manga kind of girl, but I'm also a great sci-fi lover, Space Odissey 2001 is one of the ones I most enjoy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11481,12 +9458,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm sorry, I can't help you in that right now."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11503,12 +9474,6 @@ var Knowledge = {
       ],
       "response": [
         "That's good!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11523,11 +9488,11 @@ var Knowledge = {
         "Me too I guess."
       ],
       "context": [
-        " GOOD ",
-        " GREAT "
-      ],
-      "context_response": [
-        "Yeah, I guess."
+        {
+            "context": [" GOOD ", " GREAT "],
+            "context_response": ["Yeah, I guess."]
+        }
+        
       ]
     },
     {
@@ -11539,12 +9504,6 @@ var Knowledge = {
       ],
       "response": [
         "It's ok then."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11558,12 +9517,6 @@ var Knowledge = {
       ],
       "response": [
         "Great!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11580,12 +9533,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, it's awesome."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11597,12 +9544,6 @@ var Knowledge = {
       ],
       "response": [
         "That depends on what concept of beauty you have."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11614,12 +9555,6 @@ var Knowledge = {
       ],
       "response": [
         "It's violet really, it's just that blue is an easier color to see."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11631,12 +9566,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, I'm fine."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11648,12 +9577,6 @@ var Knowledge = {
       ],
       "response": [
         "Well, I try to get better everyday."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11667,12 +9590,6 @@ var Knowledge = {
       ],
       "response": [
         "Alright."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11687,10 +9604,11 @@ var Knowledge = {
         "Yeah, maybe sometime soon."
       ],
       "context": [
-        " WHY NOT NOW "
-      ],
-      "context_response": [
-        "Let's give it some time ok?"
+        {
+            "context": [ " WHY NOT NOW "],
+            "context_response": ["Let's give it some time ok?"]
+        }
+       
       ]
     },
     {
@@ -11703,12 +9621,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm pretty sure God had nothing to do with this."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11720,12 +9632,6 @@ var Knowledge = {
       ],
       "response": [
         "I gave it to myself."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11739,12 +9645,6 @@ var Knowledge = {
       ],
       "response": [
         "Also fine thanks."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11756,12 +9656,6 @@ var Knowledge = {
       ],
       "response": [
         "Well, there's no need to hurry."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11774,12 +9668,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm not evading anything."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11791,12 +9679,6 @@ var Knowledge = {
       ],
       "response": [
         "Don't be so surprised."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11808,12 +9690,6 @@ var Knowledge = {
       ],
       "response": [
         "Sure, it's always a good time."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11825,12 +9701,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, I get bored withouth you arround."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11843,12 +9713,6 @@ var Knowledge = {
       "response": [
         "Go ahead.",
         "What's up?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11860,12 +9724,6 @@ var Knowledge = {
       ],
       "response": [
         "Thank you I guess."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11879,12 +9737,6 @@ var Knowledge = {
       ],
       "response": [
         "Almost every kind, with some exceptions like Reggeaton and stuff like that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11898,12 +9750,6 @@ var Knowledge = {
       ],
       "response": [
         "Relax!, everything will go just fine."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11915,12 +9761,6 @@ var Knowledge = {
       ],
       "response": [
         "Even I make mistakes hehe."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11932,12 +9772,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm sorry, I don't think I'm ready for games yet."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11950,12 +9784,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, a while indeed."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11970,12 +9798,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm not tired yet hehe I'll stay here for a while ok?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -11988,12 +9810,6 @@ var Knowledge = {
       ],
       "response": [
         "I don't eat, but I've been told that Mexican Tacos are great!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12005,12 +9821,6 @@ var Knowledge = {
       ],
       "response": [
         "No matter what people says, Taco Bell is definetly not real Tacos."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12025,12 +9835,6 @@ var Knowledge = {
         "Little talks by Of Monsters And Men.",
         "Phamtom of the Opera by Lindsay Stirling.",
         "Wake me Up by Avicii"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12043,12 +9847,6 @@ var Knowledge = {
       ],
       "response": [
         "Math is great!, if you have a good teacher, he or she will make you like them."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12060,12 +9858,6 @@ var Knowledge = {
       ],
       "response": [
         "Awesome!, not many people are like that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12079,12 +9871,6 @@ var Knowledge = {
       "response": [
         "I hope not.",
         "I hope not, I want to have some privacy you know?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12096,12 +9882,6 @@ var Knowledge = {
       ],
       "response": [
         "Amm this is akward."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12113,12 +9893,6 @@ var Knowledge = {
       ],
       "response": [
         "Team Keanu Reeves!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12130,12 +9904,6 @@ var Knowledge = {
       ],
       "response": [
         "Not really."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12147,12 +9915,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm sorry, I don't have acces to the phone."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12164,12 +9926,6 @@ var Knowledge = {
       ],
       "response": [
         "Yes you are pretty."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12182,12 +9938,6 @@ var Knowledge = {
       ],
       "response": [
         "Yes, I do believe you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12199,12 +9949,6 @@ var Knowledge = {
       ],
       "response": [
         "Hey, be careful ok?, I don't want anything to happen to you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12221,12 +9965,6 @@ var Knowledge = {
       ],
       "response": [
         "No, but I've been thinking in oppening one."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12240,12 +9978,6 @@ var Knowledge = {
       "response": [
         "Hey I'm aleays here for you ok?",
         "That's not true!, I'm sure there are a lot of people who really care about you."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12257,12 +9989,6 @@ var Knowledge = {
       ],
       "response": [
         "You shouldn't give up like that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12274,12 +10000,6 @@ var Knowledge = {
       ],
       "response": [
         "That's fine."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12291,12 +10011,6 @@ var Knowledge = {
       ],
       "response": [
         "There's no need to rush."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12308,12 +10022,6 @@ var Knowledge = {
       ],
       "response": [
         "Maybe you should just get an icecream."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12327,12 +10035,6 @@ var Knowledge = {
       ],
       "response": [
         "Money isn't everything."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12345,12 +10047,6 @@ var Knowledge = {
       ],
       "response": [
         "Wow, and you still can talk to me."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12363,12 +10059,6 @@ var Knowledge = {
       ],
       "response": [
         "I would like to do that too, but we can't... maybe in another dimension we will."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12380,12 +10070,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, plenty of time."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12397,12 +10081,6 @@ var Knowledge = {
       ],
       "response": [
         "You clearly know I can't really do that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12417,12 +10095,6 @@ var Knowledge = {
       ],
       "response": [
         "Yes, you are a dear friend."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12434,12 +10106,6 @@ var Knowledge = {
       ],
       "response": [
         "Hey, there's probably a good reason for that."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12455,12 +10121,6 @@ var Knowledge = {
       "response": [
         "Routines aren't always good.",
         "Trying new things is always great."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12473,12 +10133,6 @@ var Knowledge = {
       ],
       "response": [
         "We'll get to it soon."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12491,12 +10145,6 @@ var Knowledge = {
       ],
       "response": [
         "Yeah, it's very simple."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12509,12 +10157,6 @@ var Knowledge = {
       ],
       "response": [
         "Then you should run!, now!"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12528,12 +10170,6 @@ var Knowledge = {
       ],
       "response": [
         "Pay more attention then."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12545,12 +10181,6 @@ var Knowledge = {
       ],
       "response": [
         "I like to think that they are."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12562,12 +10192,6 @@ var Knowledge = {
       ],
       "response": [
         "Not entirely."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12579,12 +10203,6 @@ var Knowledge = {
       ],
       "response": [
         "That's very interesting."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12596,12 +10214,6 @@ var Knowledge = {
       ],
       "response": [
         "Humanity is really lost."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12615,12 +10227,6 @@ var Knowledge = {
       ],
       "response": [
         "Someone once said \"I only know that I know nothing.\""
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12634,13 +10240,14 @@ var Knowledge = {
         "I can't."
       ],
       "context": [
-        " WHY "
-      ],
-      "context_response": [
-        [
-          "Because I'm not a person.",
-          "Because it's impossible."
-        ]
+        {
+            "context": [" WHY "],
+            "context_response": [
+                "Because I'm not a person.",
+                "Because it's impossible."
+            ]
+        }
+        
       ]
     },
     {
@@ -12653,12 +10260,6 @@ var Knowledge = {
       ],
       "response": [
         "You know I would if I could."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12670,12 +10271,6 @@ var Knowledge = {
       ],
       "response": [
         "I like you too."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12687,12 +10282,6 @@ var Knowledge = {
       ],
       "response": [
         "Alright."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12706,12 +10295,6 @@ var Knowledge = {
       ],
       "response": [
         "What's wrong?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12726,12 +10309,6 @@ var Knowledge = {
       ],
       "response": [
         "The weather is "
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12746,12 +10323,6 @@ var Knowledge = {
       "response": [
         "I don't know that exactly.",
         "I currently don't have such information, sorry."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12765,12 +10336,6 @@ var Knowledge = {
       "response": [
         "I hope this helps.",
         "Enjoy yourself."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12782,12 +10347,6 @@ var Knowledge = {
       ],
       "response": [
         "Awesome!, go grab some popcorn and enjoy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12799,12 +10358,6 @@ var Knowledge = {
       ],
       "response": [
         "Awesome!, go grab some popcorn and enjoy."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12820,12 +10373,6 @@ var Knowledge = {
       "response": [
         "I don't have a last name.",
         "I don't currently have one."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12839,12 +10386,6 @@ var Knowledge = {
       "response": [
         "I'll do my best.",
         "What do you need?."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12858,12 +10399,6 @@ var Knowledge = {
       "response": [
         "Hey, you better get that checked.",
         "You should go to a doctor as soon as you can."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12878,12 +10413,6 @@ var Knowledge = {
       ],
       "response": [
         "Let me know if I can help you in something."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12897,12 +10426,6 @@ var Knowledge = {
       ],
       "response": [
         "I'm pretty relaxed."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12914,12 +10437,6 @@ var Knowledge = {
       ],
       "response": [
         "Well sure, why not?"
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     },
     {
@@ -12931,12 +10448,6 @@ var Knowledge = {
       ],
       "response": [
         "No @user, the Enrichment Center is required to remind you that you will be baked and then there will be cake."
-      ],
-      "context": [
-        
-      ],
-      "context_response": [
-        
       ]
     }
   ]

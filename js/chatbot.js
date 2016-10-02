@@ -45,10 +45,11 @@ class ChatBot {
     select_response (list) {
         var possible = list[Math.floor (list.length * Math.random ())];
 
-        while (possible === this.previous_response) {
-            possible = list[Math.floor (list.length * Math.random ())];
+        if (list.length > 1) {
+            while (possible === this.previous_response) {
+                possible = list[Math.floor (list.length * Math.random ())];
+            }
         }
-        
         possible = this.insert_resources (possible);
         this.previous_response = possible;
         return possible;
@@ -266,21 +267,11 @@ class ChatBot {
                 }
 				break;
 			
-			/*case " REMEMBER ME ":
-			case " REMEMBER ME TO ":
-			case " REMIND ME ":
-			case " REMIND ME TO ":
-					var task= $_.text.getSuffix(input,key).toLowerCase().charAt(0).toUpperCase() 
-							+ $_.text.getSuffix(input,key).toLowerCase().slice(1);
-					$_.storage.set("Task",task);
-					setTimeout("alert(k.getData('Task'))",300000);
-
+            case " SOLVE ":
+					
+				return eval(Text.getSuffix (input,key)).toString();
 				break;
-					
-					return eval(this.transOps($_.text.getSuffix(input,key))).toString();
-					break;
-					
-			*/
+
 			default:
 				break;
 		}

@@ -79,7 +79,8 @@ section.active {
 
 #output p span {
     padding: 0.5em 1em;
-    border-radius: 5em;
+    border-radius: 1em;
+    display: inline-block;
 }
 
 .user {
@@ -173,12 +174,20 @@ section[data-content="help"] h2 {
     section[data-content="help"] {
         width: 70%;
     }
+
+    #output p span {
+        max-width: 70%;
+    }
 }
 
 /** Medium Devices, Desktops (992px)**/
 @media screen and (min-width: 62em) {
     section[data-content="help"] {
         width: 60%;
+    }
+
+    #output p span {
+        max-width: 50%;
     }
 }
 

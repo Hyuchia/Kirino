@@ -21,7 +21,7 @@
 class User {
 
     constructor(){
-        this.name = "User";
+        this.name = "Diego";
         this.language = "en-US";
         this.searchEngine = "Google";
         this.searchEngineLink = "http://www.google.com/#q=";
